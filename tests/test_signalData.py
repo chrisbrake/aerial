@@ -12,5 +12,5 @@ def test_init_rec_true():
 
 
 def test_init_awk_false():
-    """ Confirm recording a signal and then acknowledging converts it falsey """
+    """ Confirm recording a signal and then awk converts it falsey """
     assert not signalData.SignalData(1).rec('frame').awk()
