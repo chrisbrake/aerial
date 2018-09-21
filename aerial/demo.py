@@ -13,42 +13,44 @@ from .wrappers import received
 logging.basicConfig(
     level=logging.INFO, format='[ PID %(process)d ] %(message)s')
 
+symbols = [
+    u'    →     ',
+    u'     →    ',
+    u'      →   ',
+    u'       →  ',
+    u'        → ',
+    u'         →',
+    u'         ↘',
+    u'         ↓',
+    u'         ↙',
+    u'         ←',
+    u'        ← ',
+    u'       ←  ',
+    u'      ←   ',
+    u'     ←    ',
+    u'    ←     ',
+    u'   ←      ',
+    u'  ←       ',
+    u' ←        ',
+    u'←         ',
+    u'↖         ',
+    u'↑         ',
+    u'↗         ',
+    u'→         ',
+    u' →        ',
+    u'  →       ',
+    u'   →      ',
+    u'    →     ',
+    u'     ↷    ',
+    u'     ↻    ',
+    u'     ⟳    ',
+]
+
 
 def trick():
-    syms = [
-        u'    →     ',
-        u'     →    ',
-        u'      →   ',
-        u'       →  ',
-        u'        → ',
-        u'         →',
-        u'         ↘',
-        u'         ↓',
-        u'         ↙',
-        u'         ←',
-        u'        ← ',
-        u'       ←  ',
-        u'      ←   ',
-        u'     ←    ',
-        u'    ←     ',
-        u'   ←      ',
-        u'  ←       ',
-        u' ←        ',
-        u'←         ',
-        u'↖         ',
-        u'↑         ',
-        u'↗         ',
-        u'→         ',
-        u' →        ',
-        u'  →       ',
-        u'   →      ',
-        u'    →     ',
-        u'     ↷    ',
-        u'     ↻    ',
-        u'     ⟳    ',
-    ]
-    for sym in syms:
-        print(sym, end='\r')
+    """ Spin the spinner """
+    for symbol in symbols:
+        print(symbol, end='\r')
         sys.stdout.flush()
         time.sleep(.1)
 
