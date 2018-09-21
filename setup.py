@@ -11,7 +11,7 @@ setup(
     packages=['aerial'],
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
-    description='Observable versions of python data structures',
+    description='The easy way to catch signals',
     long_description=long_description,
     long_description_content_type='text/x-rst',
     author='Chris Brake',
