@@ -1,30 +1,23 @@
 sudo: false
-
 language: python
-
 python:
-  - 2.7
-  - 3.6
-
+- 2.7
+- 3.6
 install:
-  - pip install -r requirements.txt
-  - pip install -r requirements-dev.txt
-
+- pip install -r requirements.txt
+- pip install -r requirements-dev.txt
 before_script:
-  - flake8 .
-
+- flake8 .
 script:
-  - python -m pytest tests/
-  - coverage run -m pytest tests/
-
+- python -m pytest tests/
+- coverage run -m pytest tests/
 after_success:
 - coveralls
-
 deploy:
   provider: pypi
   user: chrisbrake
   password:
-    secure: W5CHF7WkNX4HYnKeJXAIKRuEaybNfPx76S5WGCZfl92qLzAiJ/yDOIVHSLTa1mqPl9JOMWDCFaMMtAFPVtEbTw8NUBQbMJgRTwGmTGW3+fWuyW+fdJIR/HUcP2GnJ43jm9xloxlIfeVxanMYjBOuOcHBuANwlfMvm5/pVjw5jbsK1xIFqKL+BWw1NwpUhQhV0M8MKZtrfYUZSE5AdgWkrnaotrpp8cDVKUiC2ejRleMRWDB2oCCVCMU0bIcB+VLdi2OIQJXvWV+KcsbZzZO3A2/GdcgMZgrBE4QxZ5mtFqqReUHj6lr+LkhvD5zutlN5df7vvn2SV0UbbLmtXt1Evqhrosbic9Q4UPs/AX5WIyYA9DEO75EI6EbYNnxkwgb85w+cL0eYUN6IO3tn1luFzjz9M7SDPilQkXPGloUAXafavm9F5rwTMAnR1KOImZIkngn+3sdDvxjTKhwCNUklKx/74R8m/qKQ6EYbRDKgzbaBnlOx3R/72jizYVLcMAo42s8DjwZaihvSwaf92JUir6INBrIh7yCcG/o+kQ5+Z+SGnt0Q5XC/KqaVD2ByA85OEB52dc6cTedBydAkMq/bnePLTRu+sWxKVMQEbbG7HF42DdhbymjIq/x5HALAeYdGZLostWb9qqvJxI7le3iwOus/+lkwtZh/gTyp2rnV5dg=
-  distributions: "bdist_wheel"
+    secure: oUCLAAT9k/5HMIvYQJumkT+zwtjPqFlPe1T6b0tdZpESVGCs7yZJXEboHDc5X2z0z0IbBYT5fdwuYakIVnDJdEWlJPtJKGCyCoyYgReSGHgm48M/68Rgyr9EItpiN9pcrBm4JKaiJ2ylGQdwONaP1gfY4DpBFAvfazEUeJ7oGmPaOxSAEIqEAMjbq8jDNKLvChx9U4fSJGvUUIaP3v8x3bWMu20kO0tUis2eim1c1AG3urp+fWJ0G9rDOqACuShII7JunUGCxFGLjoJryRUYO6/dhE78YOQYNaVIg+xC1Lq6HwQhbDlJ5gSwK9OlHGWntkiTLTGEQgUlpPBFei7LnKSIW9vITp15Z3Vppl0Tzix6tuVFVBX7NzchaFFt5y4e++FTToVTkszu0J9+8FCBUFcauzemP2wcL5DSAYP4sbQgV2dYE3Bt8IBHl6eSK0I++P49VTEm5RSxU81kAnmMaT/ocJPihuI0DhVJREA+iutP/+HataoHBSkAhrKWSisICPu+gp/6MyInmR0XESOQZLb3EBYv8ksUCCCRmZg86CoHrvhNMpEM/I2IYwjjA4UQdJLqYxJ1+GvXsYA4kodGUsP8SUC2K71i45MHX8w+CHC6nVUBuhInPgzaU/Hr0GzQPs3xW9Bl9h9avQgC1+9IMY/0pJzM+Llfumechl4erOw=
+  distributions: sdist bdist_wheel
   on:
     tags: true
