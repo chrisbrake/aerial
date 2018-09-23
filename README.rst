@@ -19,6 +19,7 @@ A Python library for receiving Unix style signals.
 This library is meant to be a simple way to deal with handling signals, while avoiding callbacks.
 
 Install it with pip
+
 .. code-block:: bash
 
     pip install perceptible
