@@ -22,7 +22,7 @@ Install it with pip
 
 .. code-block:: bash
 
-    pip install perceptible
+    pip install aerial
     
 A simple use looks like this:
 
