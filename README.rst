@@ -35,7 +35,7 @@ A simple use looks like this:
    >>> def main_loop():
    ...     while not aerial.received(signal.SIGTERM):
    ...         if aerial.received(signal.SIGHUP):
-   ...             print('got a SIGHUP')
+   ...             print('Got a SIGHUP')
    ...         time.sleep(.5)
    ...     print('See you later')
    ... 
