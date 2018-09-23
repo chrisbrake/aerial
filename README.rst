@@ -14,7 +14,7 @@ A Python library for receiving Unix style signals.
     :target: https://badge.fury.io/py/aerial
 
 
-. quick-start-section-marker
+.. quick-start-section-marker
 
 This library is meant to be a simple way to deal with handling signals, while avoiding callbacks.
 
